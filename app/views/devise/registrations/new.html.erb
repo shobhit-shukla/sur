@@ -1,0 +1,41 @@
+<div class="devise-container">
+  <div class="card contain-sm style-transparent">
+    <h5 class="red-text header">REGISTER</h5>
+    <div class="card-body">
+      <div class="row">
+        <div class="col s6">
+
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+
+            <div class="input-field">
+              <%= f.label :email %>
+              <%= f.email_field :email, class: 'validate' %>
+            </div>
+
+            <div class="input-field">
+              <%= f.label :password, "Password (#{@minimum_password_length} characters min)" %>            
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+
+            <div class="input-field">
+              <%= f.label :password_confirmation %>
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            </div>
+
+            <div class="actions">
+              <button class="btn waves-effect waves-light red" type="submit" name="action">    Register
+                  <i class="material-icons right">send</i>
+              </button>
+              <%#= f.submit "Sign up", class: "btn btn-primary btn-raised" %>
+            </div>
+          <% end %>
+        </div>
+        
+        <div class="col s6">  
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  

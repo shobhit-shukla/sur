@@ -1,0 +1,17 @@
+<nav class="red lighten-1" role="navigation">
+  <div class="nav-wrapper container">
+    <%= link_to "SurHut", root_path, :id => "logo-container", class: "brand-logo white-text" %>
+    <ul class="right hide-on-med-and-down">
+      <% if current_user %>
+        <li class="waves-effect"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'head-link white-text' %></li>
+      <% else %>
+        <li class="waves-effect"><%= link_to 'Login', new_user_session_path, class: 'head-link white-text' %></li>
+      <% end %> 
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <li><%= link_to 'Login', new_user_session_path %></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
