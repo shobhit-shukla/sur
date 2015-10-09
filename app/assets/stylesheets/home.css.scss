@@ -16,6 +16,10 @@ p {
   -webkit-filter: blur(3px);
 }
 
+.parallax img{
+  max-width: 100%;
+}
+
 .parallax-container {
   min-height: 500px;
   line-height: 0;
