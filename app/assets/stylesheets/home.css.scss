@@ -73,3 +73,23 @@ footer.page-footer {
   margin-bottom: 15px;
   font-weight: 700;
 }
+
+#toast-container {
+  right: 40% !important;
+}
+
+.toast-success{
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.toast-danger{
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+  font-size: 1.2em;
+  font-weight: 500;
+}
