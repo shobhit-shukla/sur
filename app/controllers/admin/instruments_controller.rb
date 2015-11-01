@@ -1,4 +1,4 @@
-class InstrumentsController < ApplicationController
+class Admin::InstrumentsController < AdminController
   before_action :set_instrument, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
