@@ -1,7 +1,9 @@
 Sur::Application.routes.draw do
-  root 'pages#home'
+  root 'static_pages#home'
 
   devise_for :users
+
+  TheRoleManagementPanel::Routes.mixin(self)
 
   resources :search, only: [:index, :create]
 
