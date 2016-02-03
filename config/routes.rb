@@ -1,5 +1,6 @@
 Sur::Application.routes.draw do
   root 'static_pages#home'
+  get '/set_city/:id', to: 'static_pages#set_city', as: 'set_city'
 
   devise_for :users
 
