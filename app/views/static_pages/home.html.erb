@@ -15,15 +15,11 @@
             <%= f.select(:location ,[['Guitar',1], ['Piano',2], ['Drums',3],['FLute',4]],{ prompt: 'Select an Instrument' },  { :class => 'white-text' } )%>
           </div>
            <div class="input-field col s4">
-              <button class="btn btn-large waves-effect waves-light red" type="submit" name="action">    Search
-                  <i class="material-icons right">search</i>
-              </button>
-              <%#= f.submit "Sign up", class: "btn btn-primary btn-raised" %>
-            </div> 
+              <%= f.button raw('Search <i class="material-icons right">search</i>'), class: 'btn btn-large btn-raised red' %>
+           </div>
         <% end %>
       </div>
       <br><br>
-
     </div>
   </div>
   <div class="parallax"><%= image_tag("guitar-02.jpg") %></div>
