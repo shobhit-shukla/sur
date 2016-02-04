@@ -1,0 +1,11 @@
+<%= form_for :search, url: search_index_path, method: :get do |f| %>
+    <div class="input-field col s4">
+      <%= f.select(:region, @city.regions.collect{|region| [region.name, region.id]},{ prompt: 'Select a Location' }) %>
+    </div>
+    <div class="input-field col s4">
+      <%= f.select(:instrument_id , options_for_select(Instrument.all.collect{|ins| [ins.name, ins.id]},{ prompt: 'Select an Instrument' }))%>
+    </div>
+    <div class="input-field col s4">
+      <%= f.button raw('Search <i class="material-icons right">search</i>'), class: 'btn btn-large btn-raised red' %>
+    </div>
+<% end %>
