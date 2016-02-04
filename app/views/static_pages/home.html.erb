@@ -12,7 +12,7 @@
             <%= f.select(:region, @city.regions.collect{|region| [region.name, region.id]},{ prompt: 'Select a Location' }) %>
           </div>
           <div class="input-field col s4">
-            <%= f.select(:location ,[['Guitar',1], ['Piano',2], ['Drums',3],['FLute',4]],{ prompt: 'Select an Instrument' },  { :class => 'white-text' } )%>
+            <%= select_tag(:instrument_id , options_for_select(Instrument.all.collect{|ins| [ins.name, ins.id]},{ prompt: 'Select an Instrument' }))%>
           </div>
            <div class="input-field col s4">
               <%= f.button raw('Search <i class="material-icons right">search</i>'), class: 'btn btn-large btn-raised red' %>
